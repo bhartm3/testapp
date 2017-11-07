@@ -5,17 +5,17 @@ REGISTRY=localhost
 all: build push cleanup
 
 pull:
-        docker pull ${REGISTRY}/${ARTIFACT_ID}
+	docker pull ${REGISTRY}/${ARTIFACT_ID}
 
 build:
-        docker build -t ${REGISTRY}/${ARTIFACT_ID} -f Dockerfile .
+	docker build -t ${REGISTRY}/${ARTIFACT_ID} -f Dockerfile .
 
 push:
-        docker tag ${REGISTRY}/${ARTIFACT_ID} ${REGISTRY}/${ARTIFACT_ID}:$(version)
-        docker push ${REGISTRY}/${ARTIFACT_ID}:$(version)
+	docker tag ${REGISTRY}/${ARTIFACT_ID} ${REGISTRY}/${ARTIFACT_ID}:$(version)
+	docker push ${REGISTRY}/${ARTIFACT_ID}:$(version)
   
 cleanup:
-        docker rmi ${REGISTRY}/${ARTIFACT_ID}
-        docker tag ${REGISTRY}/${ARTIFACT_ID}:$(version)
+	docker rmi ${REGISTRY}/${ARTIFACT_ID}
+	docker tag ${REGISTRY}/${ARTIFACT_ID}:$(version)
 
 .PHONY: build push pull 
