@@ -18,4 +18,4 @@ cleanup:
         docker rmi ${REGISTRY}/${ARTIFACT_ID}
         docker tag ${REGISTRY}/${ARTIFACT_ID}:$(version)
 
-.PHONY: build push pull
+.PHONY: build push pull 
