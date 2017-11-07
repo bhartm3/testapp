@@ -4,3 +4,4 @@ services:
    image: localhost:5000/alpine:latest
    deploy:
     mode: global
+   tty: true
