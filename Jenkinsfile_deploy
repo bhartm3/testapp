@@ -1,0 +1,8 @@
+node {
+
+    stage('Deploy image') {
+       sh ''
+       
+    }
+    
+}
