@@ -15,6 +15,6 @@ node {
        sh 'docker push localhost:5000/${JOB_NAME}:latest'
        sh 'docker rmi localhost:5000/${JOB_NAME}:latest'
        
-        }
     }
+    
 }
