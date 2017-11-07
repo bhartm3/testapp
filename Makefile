@@ -1,6 +1,6 @@
 version ?= latest
 ARTIFACT_ID=testapp
-REGISTRY=localhost
+REGISTRY=$(subst __colon__,:,$(localhost:5000))
 
 all: build push cleanup
 
