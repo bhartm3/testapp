@@ -1,5 +1,7 @@
 node {
-
+    stage('Checkout scm') {
+       checkout scm
+    }
     stage('Deploy image') {
        sh 'docker stack deploy -c ./docker-compose.yml alpine'
     }
