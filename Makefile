@@ -2,7 +2,7 @@ version ?= latest
 ARTIFACT_ID=testapp
 REGISTRY=localhost:5000
 
-all: build push cleanup
+all: build
 
 pull:
 	docker pull ${REGISTRY}/${ARTIFACT_ID}
