@@ -1,0 +1,6 @@
+version: '3.2'
+services:
+ alpine:
+   image: localhost:5000/alpine:latest
+   deploy:
+    mode: global
